@@ -1,0 +1,11 @@
+*{
+    font-family: arial,sans-serif;
+
+}
+
+
+table,th,td {
+
+    border:solid black 1px;
+    border-collapse: collapse;
+}
