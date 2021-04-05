@@ -70,12 +70,11 @@ console.log(seattle);
 
 
 
-
 const tokyo = {
     name: 'tokyo',
-    minCustomers: 3,
-    maxcustomers: 24,
-    avgcustomers: 1.2,
+    minCustomers: 23,
+    maxcustomers: 65,
+    avgcustomers: 6.3,
     numberOfCustomers: [],
     numberOfCookies: [],
     total: 0,
@@ -86,7 +85,7 @@ const tokyo = {
     },
     numOfRandomCookeis: function () {
         for (let i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numberOfCookies[i] * this.avgcustomers));
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -127,13 +126,13 @@ const tokyo = {
         
 }
    
-
-
-
 tokyo.numOfRandomCustomers();
 tokyo.numOfRandomCookeis();
 tokyo.render();
 console.log(tokyo);
+
+
+
 
 
 
@@ -153,7 +152,7 @@ const dubai = {
     },
     numOfRandomCookeis: function () {
         for (let i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numberOfCookies[i] * this.avgcustomers));
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -182,7 +181,7 @@ const dubai = {
             let liElement = document.createElement('li');
             ultElement.appendChild(liElement);
 
-            liElement.textContent = `${hours[i]}: ${this.numberOfCookies[i]} cookies`;
+            liElement.textContent = `${hours[i]}: ${this.numberOfCustomers[i]} cookies`;
         }
         let totalElement=document.createElement('li');
 
@@ -218,7 +217,7 @@ const paris = {
     },
     numOfRandomCookeis: function () {
         for (let i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numberOfCookies[i] * this.avgcustomers));
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -247,7 +246,7 @@ const paris = {
             let liElement = document.createElement('li');
             ultElement.appendChild(liElement);
 
-            liElement.textContent = `${hours[i]}: ${this.numberOfCookies[i]} cookies`;
+            liElement.textContent = `${hours[i]}: ${this.numberOfCustomers[i]} cookies`;
         }
         let totalElement=document.createElement('li');
 
@@ -286,7 +285,7 @@ const lima = {
     },
     numOfRandomCookeis: function () {
         for (let i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numberOfCookies[i] * this.avgcustomers));
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -315,7 +314,7 @@ const lima = {
             let liElement = document.createElement('li');
             ultElement.appendChild(liElement);
 
-            liElement.textContent = `${hours[i]}: ${this.numberOfCookies[i]} cookies`;
+            liElement.textContent = `${hours[i]}: ${this.numberOfCustomers[i]} cookies`;
         }
         let totalElement=document.createElement('li');
 
