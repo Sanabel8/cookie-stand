@@ -85,8 +85,8 @@ const tokyo = {
         }
     },
     numOfRandomCookeis: function () {
-        for (i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numOfRandomCustomers[i] * this.avgcustomers));
+        for (let i = 0; i < hours.length; i++) {
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -152,8 +152,8 @@ const dubai = {
         }
     },
     numOfRandomCookeis: function () {
-        for (i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numOfRandomCustomers[i] * this.avgcustomers));
+        for (let i = 0; i < hours.length; i++) {
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -220,8 +220,8 @@ const paris = {
         }
     },
     numOfRandomCookeis: function () {
-        for (i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numOfRandomCustomers[i] * this.avgcustomers));
+        for (let i = 0; i < hours.length; i++) {
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
@@ -288,8 +288,8 @@ const lima = {
         }
     },
     numOfRandomCookeis: function () {
-        for (i = 0; i < hours.length; i++) {
-            this.numberOfCookies.push(Math.floor(this.numOfRandomCustomers[i] * this.avgcustomers));
+        for (let i = 0; i < hours.length; i++) {
+            this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
             this.total+=this.numberOfCookies[i];
 
         }
