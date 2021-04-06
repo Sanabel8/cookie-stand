@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color:deepskyblue;
+    background-color:rgb(12, 189, 248);
     padding: 15px;
 }
 h1{
@@ -13,10 +13,37 @@ h1{
 
 }
 a{
-text-decoration: deepskyblue;
+    font-weight: bolder;
+    margin-left: 15%;
+}
+
+#seattle{
+background-color: whitesmoke;
+margin-left: 10%;
+margin-right: 68%;
 }
 
 
+#dubai{
+background-color: whitesmoke;
+margin-left: 10%;
+margin-right: 68%;
+
+
+}
+
+#paris{
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 68%;
+
+}
+#lima{
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 68%;
+
+}
 
 
 .midle{
