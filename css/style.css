@@ -1,9 +1,61 @@
-/* *{
-    font-family: arial,sans-serif;
 
-} */
-
-
-table,th,td,tr {
-    border: 1px solid black ;
+*{
+    box-sizing: border-box;
 }
+
+body{
+    background-color:rgb(12, 189, 248);
+    padding: 15px;
+}
+h1{
+    background-color: deepskyblue;
+    text-align: center;
+
+}
+a{
+    font-weight: bolder;
+    margin-left: 15%;
+}
+
+#seattle{
+background-color: whitesmoke;
+margin-left: 10%;
+margin-right: 68%;
+}
+
+
+#dubai{
+background-color: whitesmoke;
+margin-left: 10%;
+margin-right: 68%;
+
+
+}
+
+#paris{
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 68%;
+
+}
+#lima{
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 68%;
+
+}
+
+
+.midle{
+margin-left:55% ;
+}
+
+
+
+
+
+
+
+
+
+
