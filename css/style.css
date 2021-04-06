@@ -1,0 +1,9 @@
+/* *{
+    font-family: arial,sans-serif;
+
+} */
+
+
+table,th,td,tr {
+    border: 1px solid black ;
+}
