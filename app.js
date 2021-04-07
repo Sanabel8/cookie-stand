@@ -1,206 +1,209 @@
 'use strict';
 
-// const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-// function random(min, max) {
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-// }
+//create the f for random customer number
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
-// let container = document.getElementById('container');
 
-// let table = document.createElement('table');
-// container.appendChild(table);
 
-// let headingRow = document.createElement('tr');
-// table.appendChild(headingRow);
 
+//let shopeArry = ['seattle', 'Tokyo', 'Dubai', 'paris', 'lima'];
+let collecter = [];
+function Shope(name, minCustomers, maxcustomers, avgcustomers) {
+    this.name = name;
+    this.minCustomers = minCustomers;
+    this.maxcustomers = maxcustomers;
+    this.avgcustomers = avgcustomers;
+    this.numberOfCustomers = [];
+    this.total = 0;
 
-// //create first heading is space
-// let th1 = document.createElement('th');
-// headingRow.appendChild(th1);
-// th1.textContent = '           ';
+    // randomenumber();
+    this.numberOfCookies = [];
+    collecter.push(this);
+}
+//another way to solve total of totals
+//let globalTotal = 0;
 
-// // create the  first line of table
-// for (let i = 0; i < hours.length; i++) {
+//calculate the random number for customers
+Shope.prototype.numOfRandomCustomers = function () {
+    for (let i = 0; i < hours.length; i++) {
+        this.numberOfCustomers.push(Math.floor(random(this.minCustomers, this.maxcustomers)));
+        console.log(this.numberOfCustomers);
+    }
+}
+Shope.prototype.numOfRandomCookeis = function () {
+    for (let i = 0; i < hours.length; i++) {
+        //calculate the avg per cutomers for each hour
+        this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
+        this.total += this.numberOfCookies[i];
+        console.log(this.numberOfCustomers[i]);
 
-//     let thElement = document.createElement('th');
-//     headingRow.appendChild(thElement);
-//     thElement.textContent = hours[i];
+        //globalTotal+=this.numberOfCookies[i];
 
-// }
-// // create the final heading in the first line of table
-// let dailyTotal = document.createElement('th');
-// headingRow.appendChild(dailyTotal);
-// dailyTotal.textContent = 'daily total of cookies';
+    }
+}
 
 
 
 
-// let shopeArry = ['seattle', 'Tokyo', 'Dubai', 'paris', 'lima'];
 
+let seattle = new Shope('seattle', 23, 65, 6.3);
 
-// function Shope(name, minCustomers, maxcustomers, avgcustomers) {
-//     this.name = name;
-//     this.minCustomers = minCustomers;
-//     this.maxcustomers = maxcustomers;
-//     this.avgcustomers = avgcustomers;
-//     this.numberOfCustomers = [];
-//     this.numberOfCookies = [];
-//     this.total = 0;
-//     console.log(this);
 
-// }
+let tokyo = new Shope('tokyo', 3, 24, 1.2);
 
-// // to show the tabel
-// Shope.prototype.render = function () {
+let dubai = new Shope('dubai', 11, 38, 3.7);
 
-//     //create the second line  
-//     let shopeRow = document.createElement('tr');
-//     table.appendChild(shopeRow);
 
-//     let nameData = document.createElement('td');
-//     shopeRow.appendChild(nameData);
-//     nameData.textContent = this.name;
+let paris = new Shope('paris', 20, 38, 3.7);
 
 
-//     let footerTabel = document.createElement('td');
-//     table.appendChild(footerTabel);
-//     footerTabel.textContent = 'total';
-// }
-// // let totalForAllShopesEveryHour;
-// // for (let i = 0; i < hours.length; i++) {
+let lima = new Shope('lima', 2, 16, 4.6);
 
-// //     totalForAllShopesEveryHour = 0
 
-// //     for (let j = 0; j < shopeArry.length; j++) {
-// //         totalForAllShopesEveryHour += Shope[j].numberOfCookies[i];
-// //     }
-// // }
 
-// for (let i = 0; i < hours.length; i++) {
-//     this.numberOfCustomers.push(random(this.minCustomers, this.maxcustomers));
-// }
 
-// numOfRandomCookeis = function () {
-//     for (let i = 0; i < hours.length; i++) {
-//         this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
-//         this.total += this.numberOfCookies[i];
+//making table
+let parent = document.getElementById('parent');
 
-//     }
-// }
-// Shope.render = function () {
-//     //get the parent by its id
-//     let parent = document.getElementById('parent');
-//     console.log(parent);
+let table = document.createElement('table');
+parent.appendChild(table);
 
-//     //create name
-//     let nameElement = document.createElement('h2');
 
-//     //appended to the parent
-//     parent.appendChild(nameElement);
 
 
+//making header function
+function makingHeader() {
+    let headingRow = document.createElement('tr');
+    table.appendChild(headingRow);
 
-//     //  let thElement = document.createElement('th');
-//     //headingRow.appendChild(thElement);
-//     // thElement.textContent = hours[i];
 
-//     //create the data for table
-//     let tdElement = document.createElement('td');
-//     shopeRow.appendChild(tdElement);
+    //create first heading is space
+    let th1 = document.createElement('th');
+    headingRow.appendChild(th1);
+    th1.textContent = '    ';
 
-//     tdElement.textContent = this.numberOfCookies[i];
-// }
+    // create the  first line of table
+    for (let i = 0; i < hours.length; i++) {
 
+        let thElement = document.createElement('th');
+        headingRow.appendChild(thElement);
+        thElement.textContent = hours[i];
 
-// Shope.prototype.numOfRandomCustomers = function () {
-//     for (let i = 0; i < hours.length; i++) {
-//         this.numberOfCustomers.push(random(this.minCustomers, this.maxcustomers));
-//     }
+    }
+    // create the final heading in the first line of table
+    let dailyTotal = document.createElement('th');
+    headingRow.appendChild(dailyTotal);
+    dailyTotal.textContent = 'daily total of cookies';
 
+}
 
-//     Shope.prototype.numOfRandomCookeis = function () {
-//         for (let i = 0; i < hours.length; i++) {
-//             this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
-//             this.total += this.numberOfCookies[i];
 
-//         }
 
-//         shope.prototype.render = function () {
-//             //get the parent by its id
-//             let parent = document.getElementById('parent');
-//             console.log(parent);
 
-//             //create name
-//             let nameElement = document.createElement('h2');
+//creat function by using cons (method with const)
+// to show the tabel
+Shope.prototype.render = function () {
 
-//             //appended to the parent
-//             parent.appendChild(nameElement);
+    //create the second line  (second row)
+    let collecterRow = document.createElement('tr');
+    table.appendChild(collecterRow);
 
-//         }
+    let nameData = document.createElement('td');
+    collecterRow.appendChild(nameData);
+    nameData.textContent = this.name;
 
-//         Shope.prototype.numOfRandomCookeis = function () {
-//             for (let i = 0; i < hours.length; i++) {
-//                 this.numberOfCookies.push(Math.floor(this.numberOfCustomers[i] * this.avgcustomers));
-//                 this.total += this.numberOfCookies[i];
 
-//             }
-//         }
 
-//     }
-// }
-// //     let totalForAllShopesEveryHour;
-// //     for (let i = 0; i < hours.length; i++) {
 
-// //         totalForAllShopesEveryHour = 0
 
-// //         for (let j = 0; j < shopeArry.length; j++) {
-// //             totalForAllShopesEveryHour += Shope[j].numberOfCookies[i];
-// //         }
-// //     }
+    for (let i = 0; i < hours.length; i++) {
 
+        //make td for every hour
+        let dataOfCoocies = document.createElement('td');
+        collecterRow.appendChild(dataOfCoocies);
+        dataOfCoocies.textContent = this.numberOfCookies[i];
 
+    }
 
-// let seattle = new Shope('seattle', 23, 65, 6.3);
-// console.log(seattle);
-// seattle.numOfRandomCustomers();
-// seattle.numOfRandomCookeis();
-// seattle.render();
 
+    //create td for tatal for every shope
+    let totalTd = document.createElement('td');
+    collecterRow.appendChild(totalTd);
+    totalTd.textContent = this.total;
 
 
 
-// let tokyo = new Shope('tokyo', 3, 24, 1.2);
-// console.log(tokyo);
-// tokyo.numOfRandomCustomers();
-// tokyo.numOfRandomCookeis();
-// tokyo.render();
+}
 
 
+//footer function
+function makingFooter() {
+    let footerRow = document.createElement('tr');
+    table.appendChild(footerRow);
 
+    //ceate first th for footer
+    let oneTh = document.createElement('th');
+    footerRow.appendChild(oneTh);
+    oneTh.textContent = 'total';
 
-// let dubai = new Shope('dubai', 11, 38, 3.7);
-// console.log(seattle);
-// dubai.numOfRandomCustomers();
-// dubai.numOfRandomCookeis();
-// dubai.render();
 
+    //making the totals
+    let totalForAllShopesEveryHour;
+    let megaTotal = 0;
 
+    for (let i = 0; i < hours.length; i++) {
 
+        totalForAllShopesEveryHour = 0
 
-// let paris = new Shope('paris', 20, 38, 3.7);
-// console.log(paris);
-// paris.numOfRandomCustomers();
-// paris.numOfRandomCookeis();
-// paris.render();
+        for (let j = 0; j < collecter.length; j++) {
+            totalForAllShopesEveryHour += collecter[j].numberOfCookies[i];
 
+            megaTotal += collecter[j].numberOfCookies[i];
+        }
 
+        //create last th 
+        let lastThForFooter = document.createElement('th');
+        footerRow.appendChild(lastThForFooter);
+        lastThForFooter.textContent = totalForAllShopesEveryHour;
 
-// let lima = new Shope('lima', 2, 16, 4.6);
-// console.log(lima);
-// lima.numOfRandomCustomers();
-// lima.numOfRandomCookeis();
 
-// lima.render();
+    }
+
+
+
+    //create final th for total of total
+
+    let totalOfTotalTh = document.createElement('th');
+    footerRow.appendChild(totalOfTotalTh);
+    totalOfTotalTh.textContent = megaTotal;
+
+    //solve by global tatal
+    //totalOfTotalTh.textContent =globalTotal;
+
+
+
+}
+
+
+
+
+makingHeader();
+
+for (let i = 0; i < collecter.length; i++) {
+    collecter[i].numOfRandomCustomers();
+
+    collecter[i].numOfRandomCookeis();
+    collecter[i].render();
+}
+
+makingFooter();
+
+
+
+
 
