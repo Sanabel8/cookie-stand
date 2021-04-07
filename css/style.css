@@ -6,13 +6,14 @@
 
 
 table,td,tr,th{
-    
+border: 1px solid black;
     border-collapse: collapse;
 }
 body{
     background-color:rgb(12, 189, 248);
     padding: 15px;
 }
+
 h1{
     background-color: deepskyblue;
     text-align: center;
@@ -60,8 +61,18 @@ margin-left:55% ;
 
 
 
+input:invalid {
+    border:8px dashed red;
+  }
+  
+  input:valid {
+    border: 3px solid black;
+  }
 
 
 
+  input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+  }
 
-
+  

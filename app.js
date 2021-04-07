@@ -1,3 +1,6 @@
+
+
+
 'use strict';
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -189,6 +192,60 @@ function makingFooter() {
 
 }
 
+//get element id for the form
+let shopeForm = document.getElementById('shopeForm');
+console.log(shopeForm);
+
+//add the event listener
+shopeForm.addEventListener('submit', submitter);
+
+//create submitter function
+function submitter(event) {
+    event.preventDefault()
+    let name = event.target.nameField.value;
+    console.log(nameField);
+
+    let minField = event.target.minField.value;
+    console.log(minField);
+
+    let maxFiled = event.target.maxField.value;
+    console.log(maxFiled);
+
+    let avgField = event.target.avgField.value;
+    console.log(avgField);
+
+    //make new instance of the constructer with new info
+    let addedShope = new Shope(name, minField, maxFiled, avgField)
+    console.log(addedShope);
+
+
+
+
+    let cotainer = document.getElementById(shopeForm)
+
+    //call methods for the added shope
+    addedShope.numOfRandomCustomers();
+    addedShope.numOfRandomCookeis();
+    addedShope.render();
+
+
+
+    let parent = document.getElementById('shopeForm');
+    parent.textContent = '  ';
+
+
+    makingFooter();
+
+    for (let i = 0; i < collecter.length; i++) {
+        collecter[i].numOfRandomCustomers();
+
+        collecter[i].numOfRandomCookeis();
+        collecter[i].render();
+    }
+    makingFooter();
+
+}
+
 
 
 
@@ -202,6 +259,7 @@ for (let i = 0; i < collecter.length; i++) {
 }
 
 makingFooter();
+
 
 
 
