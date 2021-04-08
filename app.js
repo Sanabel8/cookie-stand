@@ -88,7 +88,7 @@ function makingHeader() {
     //create first heading is space
     let th1 = document.createElement('th');
     headingRow.appendChild(th1);
-    th1.textContent = '    ';
+   // th1.textContent = ' ';
 
     // create the  first line of table
     for (let i = 0; i < hours.length; i++) {
@@ -218,10 +218,12 @@ function submitter(event) {
     let addedShope = new Shope(name, minField, maxFiled, avgField)
     console.log(addedShope);
 
+    //to make table empty
+    table.textContent='';
 
 
 
-    let cotainer = document.getElementById(shopeForm)
+   // let cotainer = document.getElementById('shopeForm');
 
     //call methods for the added shope
     addedShope.numOfRandomCustomers();
@@ -230,11 +232,12 @@ function submitter(event) {
 
 
 
-    let parent = document.getElementById('shopeForm');
-    parent.textContent = '  ';
+  //  let parent = document.getElementById('shopeForm');
+   // parent.textContent = '  ';
 
 
-    makingFooter();
+   // makingFooter();
+   makingHeader();
 
     for (let i = 0; i < collecter.length; i++) {
         collecter[i].numOfRandomCustomers();
