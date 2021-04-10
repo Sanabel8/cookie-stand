@@ -12,18 +12,36 @@ border: 1px solid black;
 body{
     background-color:rgb(12, 189, 248);
     padding: 15px;
+    font-family: sans-serif Georgia;
 }
+header div img{
+    position: relative;
+    right: 42%;
+    bottom: 220px;
+
+}
+main a{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: bolder;
+    padding: 20px;
+}
+    
 
 h1{
     background-color: deepskyblue;
     text-align: center;
+    height: 210px;
+    padding-top: 5%;
 
 }
 a{
     font-weight: bolder;
     margin-left: 15%;
 }
-
+.final{
+    position: relative;
+    left: 20%;
+}
 #seattle{
 background-color: whitesmoke;
 margin-left: 10%;
@@ -36,9 +54,10 @@ background-color: whitesmoke;
 margin-left: 10%;
 margin-right: 68%;
 
-
 }
-
+#first{
+    display: inline;
+}
 #paris{
     background-color: whitesmoke;
     margin-left: 10%;
@@ -51,14 +70,6 @@ margin-right: 68%;
     margin-right: 68%;
 
 }
-
-
-.midle{
-margin-left:55% ;
-}
-
-
-
 
 
 input:invalid {
@@ -75,4 +86,16 @@ input:invalid {
     background-image: linear-gradient(to right, pink, lightgreen);
   }
 
-  
+img{
+      position: relative;
+      margin-left: 690px;
+  }
+  table{
+      background-color: whitesmoke;
+  }
+  img{
+      text-align: center;
+      position: relative;
+      right: 300px;
+      margin-top: 20px;
+  }
