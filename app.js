@@ -226,9 +226,9 @@ function submitter(event) {
    // let cotainer = document.getElementById('shopeForm');
 
     //call methods for the added shope
-    addedShope.numOfRandomCustomers();
-    addedShope.numOfRandomCookeis();
-    addedShope.render();
+  //  addedShope.numOfRandomCustomers();
+ //addedShope.numOfRandomCookeis();
+  //  addedShope.render();
 
 
 
@@ -237,7 +237,7 @@ function submitter(event) {
 
 
    // makingFooter();
-   makingHeader();
+  makingHeader();
 
     for (let i = 0; i < collecter.length; i++) {
         collecter[i].numOfRandomCustomers();
